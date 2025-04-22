@@ -62,7 +62,7 @@ body{
   visibility: hidden;
 }
 
-.form button{
+.hover-button{
     background-color:#4a48b850;
     color: #fff;
     width: 100%;
@@ -72,6 +72,12 @@ body{
     font-size: 16px;
     cursor: pointer;
     margin-top: 14px;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-button:hover{
+    background-color: blue;
+    transform: scale(1.1);
 }
 
 .form-content.error input{
