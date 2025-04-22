@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="container">
+        <section class="header">
+         <H1>Formulário</H1>  
+        </section>
+    
+        <form id="form" class="form">
+            <div class="form-content">
+                <label for="username">Nome Completo</label>
+                <input
+                type="text"
+                id="username"
+                placeholder="Digite seu nome"/>
+                <a>Erro</a>
+            </div>
+
+            <div class="form-content">
+                <label for="username">Email</label>
+                <input
+                type="email"
+                id="email"
+                placeholder="Digite seu email"/>
+                <a>Erro</a>
+            </div>
+
+
+            <div class="form-content">
+                <label for="password">Sua senha</label>
+                <input
+                type="passoword"
+                id="passowrd"
+                placeholder="coloque sua senha"/>
+                <a>Erro</a>
+            </div>
+
+
+            <div class="form-content">
+                <label for="password">confirme sua senha</label>
+                <input
+                type="password"
+                id="password-confirmation"
+                placeholder="digite novamente sua senha"/>
+                <a>Erro</a>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+  
+
+<script src="index.js"></script>
+</body>
+</html>
