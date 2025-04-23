@@ -1,8 +1,8 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username")
 const email = document.getElementById("email")
-const password = document.getElementById("password")
-const passwordconfirmation = document.getElementById("password-confirmation");
+const telefone = document.getElementById("telefone")
+const imovel = document.getElementById("imovel");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -46,28 +46,28 @@ function checkInputEmail(){
     }
 }
 
-function checkInputPassword(){
-    const passwordValue = password.value;
+function checkInputTelefone(){
+    const telefoneValue = telefone.value;
 
-    if(passwordValue === ""){
-        errorInput(password, "A senha é obrigatória.") 
-    }else if(passwordValue.length < 8){
-        errorInput(password, "A senha precisa ter no minimo 8 caracteres.")    
+    if(telefoneValue === ""){
+        errorInput(telefone, "O telefone é obrigatório.") 
+    
+        errorInput(telefone, "o telefone precisa ter o +55 e o DDD")    
     }else{
-        const formItem = password.parentElement;
+        const formItem = telefone.parentElement;
         formItem.className = "form-content"
     }
 }
 
 
-function checkInputPasswordConfirmation(){
-    const passwordValue = password.value;
-    const confirmationPassowordValue = passwordconfirmation.value;
+function checkInputImovel(){
+    const imovelValue = imovel.value;
+    const ImovelValue = imovel.value;
 
-    if(confirmationPasswordValue === ""){
-        errorInput(passwordconfirmation, "A confirmação da senha é obrigatória.")
+    if(imovelValue === ""){
+        errorInput(imovel, "A confirmação do imovel é obrigatoria.")
     }else{
-    const formItem = passwordconfirmation.parentElement;
+    const formItem = imovel.parentElement;
     formItem.className = "form-content"    
     }
        
@@ -77,8 +77,8 @@ function checkInputPasswordConfirmation(){
 function checkForm(){
      checkInputUsername();
     checkInputEmail();
-    checkInputPassword();
-    checkInputPasswordConfirmation();
+    checkInputTelefone();
+    checkInputImovel();
 
    
    
@@ -90,9 +90,7 @@ const isValid = [...formItems].every( (item) => {
     return item.className === "form-content"
 });
 
-if(isValid){
-alert("Formulário enviado com sucesso!")
-}
+
 
 
 function errorInput(input, message){
